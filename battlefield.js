@@ -26,7 +26,7 @@ for(let i = startingLetterAsciiCode-1; i<=endingLetterAsciiCode; i++) {
             element.innerHTML = field;
         } else {
 
-            if(j<4 && i < startingLetterAsciiCode + 8) {
+            if(j<4 && i < startingLetterAsciiCode + 6) {
                 element.classList.add(`disabled`);
             } else if (j< 9 && i > endingLetterAsciiCode - 2 ) {
                 element.classList.add(`disabled`);
