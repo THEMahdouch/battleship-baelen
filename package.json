@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "browserify": "^16.5.1",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-less": "^4.0.1",
