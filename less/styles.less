@@ -1,0 +1,151 @@
+@gridSize: 9;
+@zSea: 1;
+@zShips: 1000;
+@zAbove: 2000;
+
+@seaColor: #123;
+@enemyColor: #f0a;
+@playerColor: #0c8;
+@hitColor: #f27;
+
+@import 'animations.less';
+@import 'components.less';
+
+body {
+    --grid-height: 800px;
+    --grid-width: 351px;
+    
+    margin: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    font-family: sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.information {
+    padding: 30px
+}
+
+.disabled {
+    background-color: gray;
+}
+
+img {
+    height: var(--grid-height);
+}
+
+.player {
+    padding-top: 20px;
+
+    &--mehdi {
+        color: #2196F3;
+    }
+
+    &--elisa {
+        color: red;
+    }
+
+
+    &--laurent {
+        color: green;
+    }
+
+    &--gaelle {
+        color: orange;
+    }
+
+    &--manu {
+        color: violet;
+    }
+}
+
+.battlefield {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(@gridSize, 1fr);
+    width: var(--grid-width);
+    height: calc(var(--grid-height) + 35px);
+    margin: 0 auto 5vw;
+    transform: translate(-39px, -39px);
+    z-index: @zSea;
+
+    &-container {
+        position: relative;
+        padding-left: 35px;
+        padding-top: 35px;
+    }
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+[class^='field-'] {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+
+        &--touche {
+            position: relative;
+            &:after {
+                content: 'X';
+                position: absolute;
+                top: 4px;
+                left: 9px;
+                font-size: 29px;
+            }
+        }
+
+        &--mehdi {
+            background-color: #2196F3;
+        }
+
+        &--elisa {
+            background-color: red;
+        }
+
+
+        &--laurent {
+            background-color: green;
+        }
+
+        &--gaelle {
+            background-color: yellow;
+        }
+
+        &--manu {
+            background-color: violet;
+        }
+    }
+
+    &:hover .checkmark {
+        background-color: #ccc;
+    }
+}

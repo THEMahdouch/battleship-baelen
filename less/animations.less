@@ -1,0 +1,47 @@
+@keyframes setShip {
+    0% {
+        transform: scale(0, 0);
+        background-color: transparent;
+    }
+    100% {
+        transform: scale(1, 1);
+        background-color: @playerColor;
+    }
+}
+
+@keyframes hit {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0;
+        background-color: transparent;
+    }
+
+    10% {
+        transform: scale(1.2, 1.2);
+        opacity: 1;
+        background-color: spin(@hitColor, 40);
+
+        box-shadow: 0 0 0 0.5em var(--shadowColor);
+    }
+
+    100% {
+        transform: scale(.7, .7);
+        opacity: .7;
+        background-color: @hitColor;
+
+        box-shadow: 0 0 0 0.5em var(--shadowColor);
+    }
+}
+
+@keyframes miss {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+        background-color: lighten(@seaColor, 50);
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: .8;
+        background-color: lighten(@seaColor, 10);
+    }
+}

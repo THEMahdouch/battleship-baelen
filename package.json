@@ -1,0 +1,23 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "Battleship Game - Baelen Edition",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify battlefield.js -o index.js",
+    "less": "gulp styles"
+  },
+  "keywords": [
+    "battleship",
+    "baelen"
+  ],
+  "author": "THEMahdouch",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^16.5.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-less": "^4.0.1",
+    "less": "^3.0.0-alpha.3"
+  }
+}
