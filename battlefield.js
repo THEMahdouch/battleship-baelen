@@ -11,7 +11,7 @@ const startingLetterAsciiCode = "A".charCodeAt();
 const endingLetterAsciiCode = "T".charCodeAt();
 for(let i = startingLetterAsciiCode-1; i<=endingLetterAsciiCode; i++) { 
 
-    for(let j=0; j<9;j++) {
+    for(let j=0; j<10;j++) {
 
         let element = document.createElement("div");
         if (i == startingLetterAsciiCode-1 && j == 0) {
@@ -26,11 +26,11 @@ for(let i = startingLetterAsciiCode-1; i<=endingLetterAsciiCode; i++) {
             element.innerHTML = field;
         } else {
 
-            if(j<4 && i < startingLetterAsciiCode + 7) {
+            if(j<4 && i < startingLetterAsciiCode + 8) {
                 element.classList.add(`disabled`);
-            } else if (j< 8 && i > endingLetterAsciiCode - 2 ) {
+            } else if (j< 9 && i > endingLetterAsciiCode - 2 ) {
                 element.classList.add(`disabled`);
-            } else if (j > 1 && j < 8 && i == endingLetterAsciiCode - 2) {
+            } else if (j > 1 && j < 9 && i == endingLetterAsciiCode - 2) {
                 element.classList.add(`disabled`);
             } else {
 
